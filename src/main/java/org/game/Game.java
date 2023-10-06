@@ -127,6 +127,8 @@ public class Game {
                 if (pickedKeys == totalKeys && currentRoom == office) {
                     OutputHandler.winMSG();
                     return true; // exit game
+                } else if (pickedKeys == totalKeys) { // room not = office
+                    System.out.println("Sie müssen ins Büro gehen, um die Kiste zu öffnen!");
                 } else { // color red
                     OutputHandler.flushMSG();
                     System.out.println("Current room: " + currentRoom.getDescription()); // print the current room
