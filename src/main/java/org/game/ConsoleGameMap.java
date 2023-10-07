@@ -2,7 +2,6 @@ package org.game;
 import java.util.ArrayList;
 import java.util.List;
 
-// simple Map for console game
 public class ConsoleGameMap {
     private final Room[][] roomArray;
     private Room currentRoom;
@@ -13,6 +12,7 @@ public class ConsoleGameMap {
     private String ANSI_BLUEe = "\u001B[34m]\u001B[0m"; // color blue ]
     private String USER = "\u001B[32mX\u001B[0m"; // color purple X
     private String BLANK = " ";
+
     public ConsoleGameMap(Room[][] roomArray) {
         // import roomArray from Game.java
         this.roomArray = roomArray;

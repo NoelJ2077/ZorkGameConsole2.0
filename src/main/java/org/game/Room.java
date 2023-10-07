@@ -1,5 +1,4 @@
 package org.game;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -20,6 +19,7 @@ public class Room {
         this.taskCompleted = false;
         items = new ArrayList<>();
     }
+    // methods here
     public void setMove(Room north, Room east, Room south, Room west) {
         roomExits.put("n", north);
         roomExits.put("e", east);
@@ -40,9 +40,11 @@ public class Room {
                 ".\n" +
                 exitString();
     }
+
     public String getDescription() {
         return description;
     }
+
     private String exitString() {
         List<String> sortedExits = roomExits.keySet().stream()
                 .filter(exit -> roomExits.get(exit) != null)
@@ -52,9 +54,11 @@ public class Room {
 
         return "Mögliche Ausgänge sind: " + String.join(", ", sortedExits);
     }
+
     public Room nextRoom(String direction) {
         return roomExits.get(direction);
     }
+
     public String performTask(String taskName) {
         if (!taskCompleted && taskName.equals("pickup key")) {
             taskCompleted = true;
@@ -65,15 +69,19 @@ public class Room {
             return "Diese Aufgabe existiert nicht in diesem Raum.";
         }
     }
+
     public void DropTask() {
         taskCompleted = false;
     }
+
     public boolean isTaskCompleted() {
         return taskCompleted;
     }
+
     public String getExitString() {
         return exitString();
     }
+
     public Room goBack() {
         if (previousRoom == null) {
             System.out.println("Am Anfang des Spiels kannst du nicht zurückgehen.");
@@ -85,6 +93,7 @@ public class Room {
             return previousRoom;
         }
     }
+
     public Room goRoom(String direction) {
         Room nextRoom = nextRoom(direction);
         if (nextRoom == null) {
@@ -95,9 +104,11 @@ public class Room {
         }
         return nextRoom;
     }
+
     public void addItem(Item item) {
         items.add(item);
     }
+
     public void removeItem(String itemName) {
         Item itemToRemove = null;
         for (Item item : items) {
@@ -110,11 +121,13 @@ public class Room {
             items.remove(itemToRemove);
         }
     }
+
     public void showItems() {
         for (Item item : items) { // for each all Items
             System.out.println(item.getName());
         }
     }
+
     public Item getItem(String itemName) {
         for (Item item : items) {
             if (item.getName().equals(itemName)) {

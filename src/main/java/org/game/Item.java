@@ -5,10 +5,10 @@ public class Item {
     public Item(String name) {
         this.name = name;
     }
+
     public String getName() {
         return name;
     }
-
     // method type static for add, remove, show
     public static void addItemToRoom(Room room, String itemName) {
         Item newItem = new Item(itemName);

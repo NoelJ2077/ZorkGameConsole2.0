@@ -8,6 +8,7 @@ public class OutputHandler {
         System.out.println("In jedem Raum müssen sie einen Schlüssel aufheben. Ziel ist, alle Schlüssel aufzuheben um den Aktenkoffer im Büro zu öffnen!");
         System.out.println("*************************************************************");
     }
+
     public static void helpMSG() {
         System.out.println("****************************************************************************");
         System.out.println("Verfügbare Commands:");
@@ -40,7 +41,7 @@ public class OutputHandler {
         System.out.println("\u001B[34m" + "Glückwunsch! Sie haben das Spiel gewonnen!" + "\u001B[0m");
     }
     public static void flushMSG() {
-        System.out.println("\u001B[31m" + "Woher kennst du den Befehl 'flush'?");
+        System.out.println("\u001B[31m" + "Woher kennst du den Befehl 'Unlock'?");
         System.out.println("Dieser Befehl ist noch nicht verfügbar!" + "\u001B[0m");
     }
 }

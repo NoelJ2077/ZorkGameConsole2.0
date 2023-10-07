@@ -1,17 +1,14 @@
 package org.game;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Game {
     private Room currentRoom;
-    // map here
     private Room selecta, office, lab, entry, outside, garden, toilet;
     private int pickedKeys = 0;
     private final int totalKeys = 7; // one key per room
     private final ConsoleGameMap gameMap;
-
 
     public Game() { // constructor
         selecta = new Room("Selecta beim Automaten");
