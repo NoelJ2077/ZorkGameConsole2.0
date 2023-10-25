@@ -42,7 +42,7 @@ public class ConsoleGameMap {
         }
 
         // Display possible exits for current room
-        System.out.print("Possible Exits:  ");
+        System.out.print("Mögliche Ausgänge:  ");
         if (currentRoom != null) {
             List<String> exits = new ArrayList<>();
             if (currentRoom.getNorthExit() != null) {
